@@ -15,6 +15,7 @@ An intelligent, multi-agent conversational system designed to interact with ente
 * **Secure & Scalable**
     * Environment variables managed safely via `.dotenv`.
     * Optimized dependency management for clean deployments.
+    * Centralized logging system (`logs/agent.log`) for monitoring workflow execution.
 
 ## 🛠️ Technology Stack
 
@@ -77,5 +78,6 @@ python main_agent2.py
 * `/Agent1`: Contains LangGraph state, nodes, and prompt logic for the SQL inventory bot.
 * `/Agent2`: Contains LlamaIndex workflow, Cypher generation, and response synthesis logic.
 * `setup_db.py`: Schema creation and data seeding for the local SQLite database.
+* `logger_config.py`: Centralized logging configuration for system monitoring.
 * `LangIndex & neo4j.txt`: Architecture outline for the intent-driven Knowledge Graph workflow.
-```
+
