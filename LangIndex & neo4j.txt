@@ -1,0 +1,7 @@
+LangIndex & neo4j 
+
+- node1 classify user intent -> general / inquire / edit / delete 
+- node2 generate cypher query if intent is inquire / edit / delete
+- node3 execute cypher query and return results to user
+- node4 synthesize results into natural language response
+  

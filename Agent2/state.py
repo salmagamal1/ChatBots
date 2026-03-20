@@ -1,10 +1,11 @@
-from dataclasses import dataclass
-from typing import Optional, List, Union
+from typing_extensions import TypedDict
+from typing import Optional, List, Union, Dict, Any
 
-@dataclass
-class State:
-    input: Optional[str] = None                      
-    intent: Optional[str] = None          
-    cypher_query: Optional[str] = None    
-    db_result: Optional[Union[List[dict], str]] = None 
-    error: Optional[str] = None
+class State(TypedDict):
+    question: str
+    chat_history: List[Dict[str, str]]
+    intent: Optional[str]
+    cypher_query: Optional[str]
+    db_result: Optional[Union[List[Any], str]]
+    final_response: Optional[str]
+    error: Optional[str]

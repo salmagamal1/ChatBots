@@ -23,12 +23,12 @@ def test_connection():
         print(f"System: Connection failed: {e}")
 
 def execute_query(query, parameters=None):
-    try:
-        with driver.session() as session:
-            result = session.run(query, parameters or {})
-            return [record.data() for record in result]
-    except Exception as e:
-        return [{"error": str(e)}]
+    with driver.session() as session:
+        # Use .run() and then .data() or .consume()
+        result = session.run(query, parameters)
+        # For WRITE operations (ADD/UPDATE/DELETE), you must consume the result
+        # to ensure the transaction is completed.
+        return result.data()
 
 
 if __name__ == "__main__":
