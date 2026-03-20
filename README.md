@@ -1,4 +1,3 @@
-```markdown
 # Enterprise Dual-Agent Chatbot System
 
 An intelligent, multi-agent conversational system designed to interact with enterprise data. This project features two specialized AI agents: a LangGraph-powered SQL chatbot for precise inventory management, and a LlamaIndex-powered Knowledge Graph agent for complex, unstructured data queries using Neo4j.
